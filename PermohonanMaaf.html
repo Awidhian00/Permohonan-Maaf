@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maaf Untuk Nanab ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.slide{
+    display:none;
+    width:100%;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    color:white;
+}
+
+.slide.active{
+    display:flex;
+}
+
+.card{
+    max-width:850px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.8;
+    font-size:20px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    margin:10px;
+    font-size:20px;
+}
+
+.next-btn{
+    background:white;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+.yes-btn{
+    background:#4CAF50;
+    color:white;
+    font-weight:bold;
+}
+
+.no-btn{
+    background:#f44336;
+    color:white;
+    position:absolute;
+}
+
+.photos{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.photos img{
+    width:250px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid white;
+    box-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.note{
+    margin-top:20px;
+    max-width:850px;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:20px;
+}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+
+<div class="slide active" id="slide1">
+
+    <div class="card">
+
+        <h1>💖 Untuk Nanab 💖</h1>
+
+        <p>
+            SAYANG,
+            <br><br>
+
+            AGUNG MINTA MAAF YAA KARENA AGUNG
+            BIKIN NANAB MARAH DAN KESALAHANNYA
+            AGUNG TIDAK MENJAWAB NANAB NGOMONG
+            SAMPAI 5X.
+            <br><br>
+
+            AGUNG SALAH DAN MENYESAL
+            SERTA TIDAK AKAN MENGULANGINYA LAGI.
+            <br><br>
+
+            AGUNG BENAR-BENAR MINTA MAAF
+            DARI HATI YANG PALING DALAM.
+            ❤️
+        </p>
+
+        <br>
+
+        <button class="next-btn" id="btnLanjut">
+            Lanjut ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SLIDE 2 -->
+
+<div class="slide" id="slide2">
+
+    <h1>Nanab Mau Maafin Agung? 🥺❤️</h1>
+
+    <div>
+
+        <button class="yes-btn" id="btnMaaf">
+            IYA DIMAAAFFFIN 😘
+        </button>
+
+        <button class="no-btn" id="btnTidak">
+            TIDAK 😭
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SLIDE 3 -->
+
+<div class="slide" id="slide3">
+
+    <h1>📜 Surat Permohonan Maaf 📜</h1>
+
+    <div class="photos">
+
+        <!-- FOTO MATERAI -->
+        <img src="materai.jpg" alt="Materai">
+
+        <!-- FOTO NANAB -->
+        <img src="nanab.jpg" alt="Nanab">
+
+    </div>
+
+    <div class mengakui kesalahannya
+            karena tidak menjawab NANAB sampai 5 kali.
+            <br><br>
+
+            AGUNG benar-benar menyesal,
+            meminta maaf dengan tulus,
+            dan berjanji tidak akan
+            mengulangi kesalahan yang sama lagi.
+            ❤️
+            <br><br>
+
+            Bermaterai dan disaksikan
+            oleh foto cantiknya NANAB.
+            💕
+            <br><br>
+
+            <b>AGUNG SAYANG NANAB ❤️</b>
+
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function tampilkanSlide(id){
+
+    document
+    .querySelectorAll(".slide")
+    .forEach(slide=>slide.classList.remove("active"));
+
+    document
+    .getElementById(id)
+    .classList.add("active");
+}
+
+document
+.getElementById("btnLanjut")
+.addEventListener("click",function(){
+
+    tampilkanSlide("slide2");
+});
+
+document
+.getElementById("btnMaaf")
+.addEventListener("click",function(){
+
+    tampilkanSlide("slide3");
+});
+
+const btnTidak =
+document.getElementById("btnTidak");
+
+function kabur(){
+
+    const x =
+    Math.random() *
+    (window.innerWidth - 200);
+
+    const y =
+    Math.random() *
+    (window.innerHeight - 100);
+
+    btnTidak.style.left = x + "px";
+    btnTidak.style.top = y + "px";
+}
+
+btnTidak.addEventListener("mouseover",kabur);
+btnTidak.addEventListener("touchstart",kabur);
+
+</script>
+
+</body>
+</html>
